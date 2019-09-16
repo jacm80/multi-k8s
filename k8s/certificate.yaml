@@ -8,6 +8,13 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: jacm-test.com
-  dndNames: 
+  dnsNames: 
     - jacm-test.com
     - www.jacm-test.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - jacm-test.com
+          - www.jacm-test.com
