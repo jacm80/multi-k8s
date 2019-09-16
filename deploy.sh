@@ -1,6 +1,6 @@
-docker build -t jacm80/multi-client:latest -t jacm80/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t jacm80/multi-server:latest -t jacm80/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t jacm80/multi-worker:latest -t jacm80/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t jacm80/multi-client:latest -t jacm80/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t jacm80/multi-server:latest -t jacm80/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t jacm80/multi-worker:latest -t jacm80/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push jacm80/multi-client:latest
 docker push jacm80/multi-server:latest
